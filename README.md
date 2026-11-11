@@ -52,8 +52,19 @@ Handy key names for `Send`:
 
 Any key or combo works. See the [AutoHotkey Send docs](https://www.autohotkey.com/docs/v2/lib/Send.htm) for the full list.
 
+## Run on startup
+
+To have the script start every time Windows does:
+
+1. Press **Win+R**, type `shell:startup` and press Enter. This opens your Startup folder (`%AppData%\Microsoft\Windows\Start Menu\Programs\Startup`).
+2. Right-click `Custom_Mouse_Gestures.ahk`, choose **Show more options > Create shortcut**, and move the shortcut into the Startup folder.
+3. Sign out and back in (or double-click the shortcut) to check it starts.
+
+Use a shortcut instead of copying the file, so edits you make to the script in this folder still apply. If you do copy the file there, edit that copy instead. To stop it running on startup, delete the shortcut.
+
 ## Notes
 
 - While the script runs, the gesture button no longer does its normal job (for example, MButton stops middle-clicking). If the button sends a keyboard key, that key is blocked too.
 - Swipes need the button to be held while you move. If your mouse sends the button as an instant tap, swipes will not work. Map it to Back or Forward in your mouse's own software instead.
 - To quit, right-click the tray icon and choose Exit.
+- Windows running as administrator (for example Task Manager) ignores the script unless the script is also run as administrator.
